@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Tabuada"/>
+        <attribute name="authors" value="caiog"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-13 10:01:25 "/>
+        <attribute name="created" value="Y2Fpb2c7REVTS1RPUC1KSDNBUjhCOzIwMjQtMDgtMTM7IjA5OjM1OjAzICI7Mjc1OQ=="/>
+        <attribute name="edited" value="Y2Fpb2c7REVTS1RPUC1KSDNBUjhCOzIwMjQtMDgtMTM7IjEwOjAxOjI1ICI7NDsyODU5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="resultado, resposta, num1, num2" type="Integer" array="False" size=""/>
+            <comment text="Foram declaradas as vari&#225;veis &quot;resultado&quot;, que ser&#225; o resultado real da tabuada, &#13;&#10;&quot;resposta&quot; que ser&#225; a resposta do usu&#225;rio, &#13;&#10;num1 e num2, que ser&#227;o os dois n&#250;meros da multiplica&#231;&#227;o na tabuada."/>
+            <comment text="Para as vari&#225;veis &quot;resultado&quot; e &quot;resposta&quot; foi atribu&#237;do o valor zero."/>
+            <assign variable="resultado" expression="0"/>
+            <assign variable="resposta" expression="0"/>
+            <comment text="Para as vari&#225;veis &quot;num1&quot; e &quot;num2&quot; foram atribu&#237;dos os valores 3 e 7, respectivamente.&#13;&#10;Estes ser&#227;o os n&#250;meros iniciais da tabuada."/>
+            <assign variable="num1" expression="3"/>
+            <assign variable="num2" expression="7"/>
+            <while expression="resultado == resposta">
+                <comment text="Na estrutura while, foi determinado que enquanto o valor da vari&#225;vel &quot;resposta&quot; for igual ao valor da vari&#225;vel &quot;resultado&quot;, haver&#225; o loop.&#13;&#10;Ou seja, o jogo continua enquanto o usu&#225;rio acertar o resultado da tabuada."/>
+                <output expression="num1&amp;&quot; X &quot;&amp;num2&amp;&quot;:&quot;" newline="True"/>
+                <comment text="A tabuada &#233; apresentada ao usu&#225;rio, e em seguida o valor informado pelo usu&#225;rio &#233; atribu&#237;do &#224; vari&#225;vel resposta."/>
+                <input variable="resposta"/>
+                <comment text="&#192; vari&#225;vel resultado &#233; atribu&#237;do o valor do resultado da multiplica&#231;&#227;o de &quot;num1&quot; e &quot;num2&quot;."/>
+                <assign variable="resultado" expression="num1 * num2"/>
+                <comment text="&#192; cada repeti&#231;&#227;o do loop, os valores de &quot;num1&quot; e &quot;num2&quot; s&#227;o alterados de modo &#224; apresenta&#231;&#227;o da tabuada seja de certa forma imprevis&#237;vel e apresente maior dificuldade.&#13;&#10;Consolidando a ideia de jogo.&#13;&#10;"/>
+                <comment text="&quot;num1&quot; ser&#225; igual &#224; (&quot;num2&quot; - &quot;num1&quot;) + 4&#13;&#10;&#13;&#10;enquanto&#13;&#10;&#13;&#10;&quot;num2&quot; ser&#225; igual &#224; (&quot;num1&quot; + &quot;num2&quot;) - 6"/>
+                <assign variable="num1" expression="(num2 - num1)+ 4"/>
+                <assign variable="num2" expression="(num1 + num2) - 6"/>
+            </while>
+            <comment text="Assim que o usu&#225;rio errar o resultado o jogo se encerra."/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Dez primeiros n&#250;meros pares"/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-13 09:08:34 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7U041MTItMTI0Mjk4MjsyMDI0LTA3LTI3OyIwMzo1Nzo0MiAiOzMxMjQ="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7U041MTItMTI0Mjk4MjsyMDI0LTA3LTI3OyIwNDozNDoxMSAiOzE7MzIyNA=="/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLUZRR0NGOE07MjAyNC0wOC0xMzsiMDg6NDc6MTQgIjszOzI3OTk="/>
+        <attribute name="edited" value="Y2Fpb2c7REVTS1RPUC1KSDNBUjhCOzIwMjQtMDgtMTM7IjA5OjA4OjM0ICI7MTsyODcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="contador" type="Integer" array="False" size=""/>
+            <comment text="Declarada a vari&#225;vel contador (n&#250;mero inteiro)."/>
+            <assign variable="contador" expression="0"/>
+            <comment text="&#192; vari&#225;vel contador foi atribu&#237;do o valor 0 (zero)."/>
+            <while expression="contador&lt;20">
+                <comment text="Na estrutura de repeti&#231;&#227;o while foi determinado que ela se repetir&#225; enquanto o valor do contador for menor que 20."/>
+                <output expression="contador" newline="True"/>
+                <comment text="&#193; cada repari&#231;&#227;o ser&#225; exibido o valor do contador."/>
+                <assign variable="contador" expression="contador+2"/>
+                <comment text="Ser&#225; somado o valor 2 &#224; vari&#225;vel contador &#224; cada repeti&#231;&#227;o do while. De modo que todos os valores do contador ser&#227;o pares, iniciando pelo zero."/>
+            </while>
+            <comment text="As repeti&#231;&#245;es do while ir&#227;o parar assim que o valor do contador n&#227;o for menor que 20, ou seja quando o mesmo chegar ao valor 20.&#13;&#10;Ao fim da execi&#231;&#227;o do c&#243;digo ter&#227;o sido exibidos os 10 primeiros n&#250;meros pares."/>
+        </body>
+    </function>
+</flowgorithm>

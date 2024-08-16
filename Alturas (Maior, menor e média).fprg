@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Alturas (Maior, menor e m&#233;dia)"/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-13 09:25:29 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7U041MTItMTI0Mjk4MzsyMDI0LTA3LTI3OyIwNDozNzo1NiAiOzMxMjk="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7U041MTItMTI0Mjk4MzsyMDI0LTA3LTI3OyIwNTozNDoyMCAiOzU7MzIzMA=="/>
+        <attribute name="edited" value="Y2Fpb2c7REVTS1RPUC1KSDNBUjhCOzIwMjQtMDgtMTM7IjA5OjI1OjI5ICI7MzsyODc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pessoas" type="Integer" array="False" size=""/>
+            <comment text="Foi declarada a vari&#225;vel &quot;pessoas&quot; (n&#250;mero ineiro)."/>
+            <declare name="maior, menor, media, altura, soma" type="Real" array="False" size=""/>
+            <comment text="Foram declaradas as vari&#225;veis &quot;maior&quot;, &quot;menor&quot;, &quot;media&quot;, &quot;altura&quot; e &quot;soma&quot;, como n&#250;meros reais."/>
+            <assign variable="media" expression="0"/>
+            <comment text="&#192; vari&#225;vel media foi atribu&#237;do o valor zero."/>
+            <assign variable="soma" expression="0"/>
+            <comment text="&#192; vari&#225;vel soma foi atribu&#237;do o valor zero."/>
+            <for variable="pessoas" start="1" end="10" direction="inc" step="1">
+                <comment text="Na estrutura de repeti&#231;&#227;o &quot;for&quot; foi determinado que o mesmo ir&#225; repetir o loop 10 vezes (de 1 &#224; 10 em ordem crescente)."/>
+                <output expression="&quot;Digite sua altura:&quot;" newline="True"/>
+                <comment text="Ser&#225; atribu&#237;da &#224; vari&#225;vel &quot;altura&quot; o valor informado pelo usu&#225;rio."/>
+                <input variable="altura"/>
+                <if expression="pessoas==1">
+                    <then>
+                        <comment text="Caso o a vari&#225;vel &quot;pessoas&quot; seja igual &#224; 1 (ou seja, na primeira volta do loop), o valor de altura informado pelo usu&#225;rio ser&#225; atribu&#237;do &#224;s vari&#225;veis &quot;menor&quot; e &quot;maior&quot;. Pois a primeira altura informada &#233; ao mesmo tempo a maior e a menor altura."/>
+                        <assign variable="menor" expression="altura"/>
+                        <assign variable="maior" expression="altura"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="altura&gt;=maior">
+                    <then>
+                        <comment text="Se a altura informada pelo usu&#225;rio for maior que a altura informada na repeti&#231;&#227;o anterior, ela ser&#225; atribu&#237;da &#224; vari&#225;vel &quot;maior&quot;."/>
+                        <assign variable="maior" expression="altura"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="altura&lt;=menor">
+                    <then>
+                        <comment text="Se a altura informada pelo usu&#225;rio for menor que a altura informada na repeti&#231;&#227;o anterior, ela ser&#225; atribu&#237;da &#224; vari&#225;vel &quot;menor&quot;."/>
+                        <assign variable="menor" expression="altura"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="soma" expression="soma + altura"/>
+                <comment text="&#192; cada repeti&#231;&#227;o do loop, ser&#225; acrescentada &#224; vari&#225;vel soma o valor da altura informada.&#13;&#10;Dessa forma, ao final das repeti&#231;&#245;es &#224; vari&#225;vel soma conter&#225; o valor total de todas as alturas informadas."/>
+            </for>
+            <comment text="Ap&#243;s encerradas as repeti&#231;&#245;es, ser&#225; atribu&#237;do &#224; vari&#225;vel &quot;media&quot;, o valor da vari&#225;vel soma dividido por 10."/>
+            <assign variable="media" expression="soma / 10"/>
+            <comment text="Em seguida, ser&#227;o exibidos a m&#233;dias das alturas, a maior altura e a menor altura.&#13;&#10;Assim o c&#243;digo chega ao fim."/>
+            <output expression="media" newline="True"/>
+            <output expression="maior" newline="True"/>
+            <output expression="menor" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
