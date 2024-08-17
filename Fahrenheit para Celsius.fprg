@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Fahrenheit para Celsius"/>
+        <attribute name="authors" value="caiog"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-16 07:12:19 "/>
+        <attribute name="created" value="Y2Fpb2c7REVTS1RPUC1KSDNBUjhCOzIwMjQtMDgtMTY7IjA3OjAxOjUyICI7Mjc1Nw=="/>
+        <attribute name="edited" value="Y2Fpb2c7REVTS1RPUC1KSDNBUjhCOzIwMjQtMDgtMTY7IjA3OjEyOjE5ICI7MjsyODcx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="grausF, grausC" type="Real" array="False" size=""/>
+            <comment text="Foram declaradas as vari&#225;veis: grausF para Fahrenheit e grausC para Celsius."/>
+            <assign variable="grausF" expression="0"/>
+            <comment text="Foi atribu&#237;do o valor zero para a vari&#225;vel grausC."/>
+            <output expression="&quot;Informe a temperatura com os graus em escala Fahrenheit: &quot;" newline="True"/>
+            <comment text="Foi solicitado ao usu&#225;rio informar uma temperatura em escala Fahrenheit.&#13;&#10;Em seguida, o valor informado foi atribu&#237;do &#224; vari&#225;vel grausF."/>
+            <input variable="grausF"/>
+            <comment text="Conforme a f&#243;rmula abaixo, foi atrubu&#237;do o resultado em graus Celsius para a vari&#225;vel grausC.&#13;&#10;&#13;&#10;C = (F -32) / 1,8"/>
+            <assign variable="grausC" expression="(grausF - 32) / 1.8"/>
+            <comment text="Em seguida a temperatura em Celsius &#233; exibida ao usu&#225;rio."/>
+            <output expression="grausF&amp;&quot; graus Fahrenheit equivalem &#224; &quot;&amp;grausC&amp;&quot; graus Celsius.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

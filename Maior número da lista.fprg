@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Maior n&#250;mero da lista"/>
+        <attribute name="authors" value="caiog"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-17 09:17:39 "/>
+        <attribute name="created" value="Y2Fpb2c7REVTS1RPUC1KSDNBUjhCOzIwMjQtMDgtMTY7IjA5OjA0OjUwICI7Mjc2MA=="/>
+        <attribute name="edited" value="Y2Fpb2c7REVTS1RPUC1KSDNBUjhCOzIwMjQtMDgtMTc7IjA4OjU0OjM3ICI7Mjk7MjkzNg=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7U041MTItMTI0Mjk4MzsyMDI0LTA4LTE3OyIwOToxNzozOSAiOzM7MzI0Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qtdeNumeros, maior" type="Integer" array="False" size=""/>
+            <comment text="Foram declaradas as vari&#225;veis &quot;qtdeNumeros&quot; e &quot;maior&quot;."/>
+            <output expression="&quot;Digite a quantidade de n&#250;meros: &quot;" newline="True"/>
+            <comment text="Foi solicitado ao usu&#225;rio para inserir a quantidade de n&#250;meros que a lista ter&#225;.&#13;&#10;Em seguida, o valor informado foi atribu&#237;do &#224; vari&#225;vel &quot;qtdeNumeros&quot;."/>
+            <input variable="qtdeNumeros"/>
+            <comment text="Foi declarada a vari&#225;vel &quot;numeros&quot; como vetor, sendo que, a quantidade depender&#225; da quantidade de n&#250;meros informadas na vari&#225;vel &quot;qtdeNumeros&quot;."/>
+            <declare name="numeros" type="Integer" array="True" size="qtdeNumeros"/>
+            <comment text="Para a vari&#225;vel &quot;maior&quot; foi atribu&#237;do o valor zero."/>
+            <assign variable="maior" expression="0"/>
+            <comment text="Foi declarada a vari&#225;vel &quot;contador&quot;."/>
+            <declare name="contador" type="Integer" array="False" size=""/>
+            <comment text="Na estrutura de repeti&#231;&#227;o &quot;for&quot; foi definido que haver&#225; repeti&#231;&#227;o enquanto o valor do contador for de zero at&#233; a quantidade de n&#250;meros - 1."/>
+            <for variable="contador" start="0" end="qtdeNumeros-1" direction="inc" step="1">
+                <comment text="&#192; cada repeti&#231;&#227;o, ser&#225; solicitado ao usu&#225;rio informar o n&#250;mero.&#13;&#10;Em seguida ser&#225; atribu&#237;do o valor informado &#224; vari&#225;vel numeros, de acordo com o valor do contador."/>
+                <output expression="&quot;Digite o n&#250;mero: &quot;&amp;contador + 1" newline="True"/>
+                <input variable="numeros[contador]"/>
+                <comment text="Para a vari&#225;vel maior, ser&#225; atribu&#237;do &#224; cada repeti&#231;&#227;o, o valor identificado como o maior atrav&#233;s da fun&#231;&#227;o &quot;maiorNumero&quot;."/>
+                <assign variable="maior" expression="maiorNumero(numeros[contador])"/>
+            </for>
+            <comment text="Em seguida, o maior n&#250;mero &#233; exibido ao usu&#225;rio."/>
+            <output expression="&quot;O maior n&#250;mero &#233;: &quot;&amp;maior" newline="True"/>
+        </body>
+    </function>
+    <function name="maiorNumero" type="Integer" variable="maior">
+        <parameters>
+            <parameter name="numero" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <comment text="Foi determinado que a fun&#231;&#227;o maiorNumero ter&#225; como par&#226;metro &quot;numero&quot;."/>
+            <declare name="maior" type="Integer" array="False" size=""/>
+            <comment text="Foi declarada a vari&#225;vel &quot;maior&quot;, em seguida foi atribu&#237;do &#224; ela o valor zero."/>
+            <assign variable="maior" expression="0"/>
+            <if expression="numero &gt; maior">
+                <then>
+                    <comment text="Na estrutura condicional &quot;Se&quot;, foi determinado que, caso o n&#250;mero informado seja maior que o anterior, a vari&#225;vel maior receber&#225; o n&#250;mero informado.&#13;&#10;Caso n&#227;o seja, a vari&#225;vel maior continua com o valor que j&#225; tinha anteriormente."/>
+                    <assign variable="maior" expression="numero"/>
+                    <comment text="Por fim, a fun&#231;&#227;o retorna o valor da vari&#225;vel &quot;maior&quot;."/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

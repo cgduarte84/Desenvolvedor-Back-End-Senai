@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Lucro dos produtos"/>
+        <attribute name="authors" value="caiog"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-16 08:51:02 "/>
+        <attribute name="created" value="Y2Fpb2c7REVTS1RPUC1KSDNBUjhCOzIwMjQtMDgtMTY7IjA3OjQyOjIyICI7Mjc1OQ=="/>
+        <attribute name="edited" value="Y2Fpb2c7REVTS1RPUC1KSDNBUjhCOzIwMjQtMDgtMTY7IjA4OjUxOjAyICI7OTsyODc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Foi declarada a variavel produto como vetor indicando na matriz o valor 3, pois ser&#227;o apenas 3 produtos conforme enunciado."/>
+            <declare name="produto" type="String" array="True" size="3"/>
+            <comment text="Foram declaradas as vari&#225;veis custo, preco e lucro, como vetores indicando na matris o valor 3."/>
+            <declare name="custo, preco, lucro" type="Integer" array="True" size="3"/>
+            <declare name="contador" type="Integer" array="False" size=""/>
+            <comment text="Foi declarada a vari&#225;vel contador e em seguida foi atribu&#237;do &#224; ela o valor zero."/>
+            <assign variable="contador" expression="0"/>
+            <comment text="Foi determinado que o contador ir&#225; repetir o loop 3 vezes, pois foi definido de zero &#224; dois."/>
+            <for variable="contador" start="0" end="2" direction="inc" step="1">
+                <comment text="&#192; cada repeti&#231;&#227;o do loop, ser&#227;o solicitados ao usu&#225;rio o nome do produto, seus respectivos custos e pre&#231;os."/>
+                <comment text="Os valores ser&#227;o atribu&#237;dos &#224;s vari&#225;veis / vetores proporcionalmente ao valor do contador."/>
+                <output expression="&quot;Digite o nome do produto &quot;&amp;contador + 1" newline="True"/>
+                <input variable="produto[contador]"/>
+                <output expression="&quot;Digite o custo do produto &quot;&amp;contador + 1" newline="True"/>
+                <input variable="custo[contador]"/>
+                <output expression="&quot;Digite o pre&#231;o do produto &quot;&amp;contador + 1" newline="True"/>
+                <input variable="preco[contador]"/>
+                <comment text="Em seguida &#233; calculada a margem de lucro do produto, subtraindo o pre&#231;o pelo custo."/>
+                <assign variable="lucro[contador]" expression="preco[contador] - custo[contador]"/>
+            </for>
+            <for variable="contador" start="0" end="2" direction="inc" step="1">
+                <comment text="Para finalizar, s&#227;o apresentados na tela os nomes dos produtos com suas respectivas margens de lucro (conforme valor do contador)."/>
+                <output expression="&quot;O lucro do produto &quot;&amp;produto[contador]&amp;&quot; &#233; de &quot;&amp;lucro[contador]&amp;&quot; reais.&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
